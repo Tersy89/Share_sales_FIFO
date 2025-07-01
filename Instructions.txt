@@ -1,0 +1,12 @@
+Program excepts excel files (.csv). Need to be in the following format. See attach image.
+
+Date,Type,Code,Quantity,Price,Fees
+2023-01-10,Buy,AAPL,10,150.00,5.00
+2023-02-15,Buy,MSFT,20,300.00,7.50
+2023-03-20,Buy,AAPL,5,160.00,5.00
+2023-04-05,Sell,AAPL,12,175.00,6.00
+2023-05-10,Sell,MSFT,15,320.00,7.00
+
+You need to install two libraries, pandas for data manipulation and openpyxl for reading Excel files. You can install them using pip:
+
+"pip install pandas openpyxl"
