@@ -1,4 +1,4 @@
-Program excepts excel files (.csv). Need to be in the following format. See attach image.
+Program excepts excel files (.csv). Need to be in the following format. See attach Sample input.xlsx
 
 Date,Type,Code,Quantity,Price,Fees
 2023-01-10,Buy,AAPL,10,150.00,5.00
@@ -7,6 +7,11 @@ Date,Type,Code,Quantity,Price,Fees
 2023-04-05,Sell,AAPL,12,175.00,6.00
 2023-05-10,Sell,MSFT,15,320.00,7.00
 
-You need to install two libraries, pandas for data manipulation and openpyxl for reading Excel files. You can install them using pip:
-
+You will need to install Python
+You will also need to install two libraries, pandas for data manipulation and openpyxl for reading Excel files. You can install them using pip:
 "pip install pandas openpyxl"
+
+The program has a GUI which will allow you to easily upload your share transactions.
+The Program will output two files:
+1. holdings report - This displays any holdings after sales,used for the next FY
+2. Sales report - This shows all sales that were calculated with Profit/loss
