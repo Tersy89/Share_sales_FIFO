@@ -1,0 +1,61 @@
+Program Summary
+The FIFO Profit/Loss Calculator is a desktop application designed for investors to track their portfolio's performance using the First-In, First-Out (FIFO) accounting method. Users import a transaction file (CSV or Excel) containing their buy and sell history, and the program automatically calculates capital gains, losses, and current holdings.
+
+The application features a clean, tabbed interface that presents the data in three distinct reports:
+
+Sales Report: A detailed, chronological log of every sale, showing the proceeds, cost basis, and the resulting profit or loss for each transaction. It also indicates if a sale qualifies for a long-term Capital Gains Discount (CGD).
+
+Holdings Report: Shows a detailed breakdown of every individual purchase lot that remains unsold. Useful for comparing balance with actual holding and for future years.
+
+Profit/Loss Summary: A consolidated report showing the overall total profit/loss and total Capital Gains Discounts across all transactions, along with a per-stock breakdown of performance.
+
+All reports can be exported to CSV files for record-keeping or further analysis. The program is built with robust data validation, handling common entry errors like negative values and preventing calculations based on selling more shares than are owned.
+
+Changelog
+Version 1.0 (Initial Version)
+
+Core FIFO logic established to calculate profit and loss from a transaction list.
+
+Basic GUI implemented using Tkinter.
+
+Required input columns: Date, Type, Code, Quantity, Price, Fees.
+
+Initial implementation produced a single sales report.
+
+Version 2.0
+
+Feature: Introduced a "Holdings Report" to display remaining unsold assets.
+
+GUI: Implemented a ttk.Notebook (tabbed view) to separate the "Sales Report" and "Holdings Report".
+
+Improvement: Enhanced the core logic to return two distinct DataFrames: one for sales and one for holdings.
+
+Version 3.0
+
+Calculation Change: Reworked the core logic to use a single Total column for cost basis and proceeds, removing the need for separate Price and Fees columns. This simplified the input data requirements.
+
+Feature: Added a new "Profit/Loss Summary" report in a third tab.
+
+GUI: The new summary tab displays total profit/loss, total Capital Gains Discount (CGD), and a per-stock breakdown of profits.
+
+Improvement: The "Holdings Report" was enhanced to include a Total Cost for each lot and a grand total summary label at the bottom.
+
+Version 4.0
+
+Data Validation: Implemented robust error handling for sales transactions.
+
+Oversell Protection: The program now throws an error and stops if a sale quantity for a stock is greater than the quantity held.
+
+Invalid Data Handling: The logic was updated to completely ignore and skip any sale transaction where the Quantity or Total was a negative number.
+
+Version 5.0
+
+Logic Change: Modified the data handling for negative values in sales. Instead of ignoring the transaction, the program now treats negative Quantity and Total values as positive by taking their absolute value before processing the calculation.
+
+Version 6.0 (Current)
+
+Formatting: Updated date handling for all outputs.
+
+The time component (00:00:00) was removed from all dates in the reports.
+
+All dates in the GUI and exported CSV files are now formatted consistently as DD/MM/YYYY.
